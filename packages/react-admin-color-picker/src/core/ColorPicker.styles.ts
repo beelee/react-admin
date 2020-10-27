@@ -3,7 +3,7 @@ import { createStyles } from "@material-ui/styles";
 
 export type VPAdminColorPickerClassKeys =
     | "input"
-    | "popover"
+    | "popupWrapper"
     | "pickedColorIndicator"
     | "saturationWrapper"
     | "saturationPointer"
@@ -15,7 +15,10 @@ export type VPAdminColorPickerClassKeys =
 const styles = (theme: Theme) =>
     createStyles({
         input: {},
-        popover: {},
+        popupWrapper: {
+            position: "absolute",
+            zIndex: 1300,
+        },
         pickedColorIndicator: {
             width: "20px",
             height: "20px",
